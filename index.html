@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+<head>
+  <title>Ethan Davidson</title>
+  <link rel="shortcut icon" type="image/x-icon" href="http://ethandavidson.com/l/img/ethan-logo.gif">
+  <link rel="stylesheet"  href="homepage-assets/style.css" />
+  <link rel="stylesheet"  href="homepage-assets/dropdown.css" />
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="homepage-assets/main.js"></script>
+
+</head>
+<body id="top">
+
+  <section class="b1" id="desktop-splash">
+    <div class="in1">
+      <div class="content">
+        <h1>
+          welcome to<br>ethandavidson.com
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <section id="mobile-splash">
+    <header id="mobile-header">
+      <p>Welcome to</p>
+      <h1>ethandavidson.com</h1>
+    </header>
+  </section>
+
+  <div id="nav-container"></div>
+
+  <div class="grass-divider">
+    <img src="homepage-assets/grass.png">
+  </div>
+
+  <table align="center"><tr><td>
+  <div id="portfolio" style="background-color:#7FAD71;">
+    <h1 class="heading">Portfolio</h1>
+    <hr><br>
+    <ul><li>
+      <a href="http://ethandavidson.com/q/">
+      <div title="A YouTube player with a lightweight, simple interface for creating casual queues for YouTube videos."><img class="project-thumb" src="homepage-assets/ptf/thumb1.png">
+        <div class="txt-overlay">
+          <p class="project-title">YouTube Q</p>
+        </div>
+      </div>
+      </a>
+    </li><li>
+      <a href="http://emerald.ethandavidson.com/">
+      <div title="A homebrewed platformer videogame using html elements and a physics engine like you've never seen before.">
+        <img class="project-thumb" src="homepage-assets/ptf/thumb2.png">
+        <div class="txt-overlay">
+          <p class="project-title">Emerald</p>
+        </div>
+      </div>
+      </a>
+    </li><li>
+      <a href="http://stickies.ethandavidson.com/">
+      <div title="A Google Docs-esque platform for sharing and posting stickynotes.">
+        <img class="project-thumb" src="homepage-assets/ptf/thumb3.png">
+        <div class="txt-overlay">
+          <p class="project-title">Stickies</p>
+        </div>
+      </div>
+      </a>
+    </li><li>
+      <a href="http://tumble.ethandavidson.com/">
+      <div title="An html canvas game with custom graphics and a highscore system.">
+        <img class="project-thumb" src="homepage-assets/ptf/thumb4.png">
+        <div class="txt-overlay">
+          <p class="project-title">Moonlight Tumble</p>
+        </div>
+      </div>
+      </a>
+    </li><li>
+      <a href="https://vaqcoders.github.io/website/">
+      <div title="Club at RAHS of which I am president.">
+        <img class="project-thumb" src="homepage-assets/ptf/thumb5.png">
+        <div class="txt-overlay">
+          <p class="project-title">Vaqcoders</p>
+        </div>
+      </div>
+      </a>
+    </li></ul>
+  </div>
+  </td></tr></table>
+
+  <br><br><br><br><br>
+
+  <section id="about">
+    <h1 class="heading">About</h1>
+    <hr><br>
+    <p>
+      Hello, world! Welcome to my site! My name is <strong>Ethan Davidson</strong>. I am all about helping and collaborating with people in the ceaseless attempt of making the world a better place. It would be an honor to assist you in your efforts! I am glad to help, using all of the skills that I have picked up (and <i>still</i> picking up) over my years of experience with development.
+    </p><br>
+    <img src="homepage-assets/plank.png" style="width:50vw;-webkit-transform:scaleX(-1);transform:scaleX(-1);">
+    <br><p>
+      You can <span id="contact"><strong>CONTACT</strong><span> me via my <a href="mailto:ethan.r.davidson@gmail.com?Subject=Hello%2C%20Ethan">gmail</a> or <a href="https://www.instagram.com/ethanthatonekid/">instagram</a> for inqueries!
+    </p>
+  </section>
+  <br><br><br><br>
+
+  <div id="github-contributions-container" style="background-color:rgba(255,255,255,0.5);text-align:center;padding:10px;">
+    My <a href="https://github.com/EthanThatOneKid">GitHub</a> Activity<br><br>
+    <img src="http://ghchart.rshah.org/EthanThatOneKid" style="width:75vw;" alt="EthanThatOneKid's Github chart"/>
+  </div>
+
+  <div id="legacy-bar"></div>
+
+  <footer style="padding:2.5vh;background-color:#ddd;">
+    <img src="homepage-assets/avt.png" alt="Mii" style="border-radius:50%; width:50px; height:50px; vertical-align:middle;"> |
+    <small>EthanThatOneKid &copy 2018</small> |
+    <small>gmail: <a href="mailto:ethan.r.davidson@gmail.com?Subject=Hello%2C%20Ethan">ethan.r.davidson@gmail.com</a></small> |
+    <small>instagram: <a href="https://www.instagram.com/ethanthatonekid/">@EthanThatOneKid</a></small> |
+    <small>discord: <input id="discord-un" onclick="javascript:copyDiscordUsername()" value="EthanThatOneKid#3456"></small> |
+    <small><a href="javascript:anchor('top')">goto top &#x2191;</a></small>
+</footer>
+
+</body>
+
+<script>
+
+  /* NAVBAR MENU CONFIG */
+  initDropdownMenu(
+    document.getElementById("nav-container"), "dropdown",
+    recursiveList([
+      {
+        "title": "Portfolio",
+        "a": "javascript:anchor('portfolio')",
+        "children": null
+      },
+      {
+        "title": "About",
+        "a": "javascript:anchor('about')",
+        "children": null
+      },
+      {
+        "title": "Contact",
+        "a": "javascript:anchor('contact')",
+        "children": null
+      }
+    ])
+  );
+
+  /* LEGACY MENU CONFIG */
+  initDropdownMenu(
+    document.getElementById("legacy-bar"), "dropdown",
+    recursiveList([
+      {
+        "title": "Games",
+        "a": "http://ethandavidson.com/games/",
+        "children": null
+      },
+      {
+        "title": "Neopets",
+        "a": "http://ethandavidson.com/neopets/",
+        "children": null
+      },
+      {
+        "title": "Code Signal",
+        "a": "https://app.codesignal.com/profile/ethanthatonekid/",
+        "children": null
+      },
+      {
+        "title": "Codepen",
+        "a": "https://codepen.io/EthanDavidson/",
+        "children": null
+      }
+    ])
+  );
+
+</script>
+</html>

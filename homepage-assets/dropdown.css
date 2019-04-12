@@ -1,0 +1,63 @@
+nav.dropdown ul {
+  list-style: none;
+}
+nav.dropdown ul li {
+	float: left;
+	padding-right: 1px;
+	position: relative;
+}
+nav.dropdown ul a {
+	display: table-cell;
+	vertical-align: middle;
+	width: 12.5vw;
+	height: 3vw;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+  animation: fadeIn 1s;
+  -webkit-transition: border-radius 1s, box-shadow 1s; /* Safari */
+  transition: border-radius 1s, box-shadow 0.5s;
+  transition-timing-function: ease-in-out;
+}
+nav.dropdown ul a:hover {
+  box-shadow: inset 0px 0px 5vw 0px #793f98;
+  border-radius: 10vw 10vw 10vw 10vw;
+}
+nav.dropdown li > ul {
+	display: none;
+	position: absolute;
+	width: 15vw;
+  left: calc(100% * 0.2);
+	top: 100%;
+}
+nav.dropdown li:hover > ul {
+	display: block;
+}
+nav.dropdown li > ul li {
+	padding: 0;
+	padding-top: 1px;
+}
+nav.dropdown li > ul li > ul {
+	left: 100%;
+	top: 0px;
+	padding-left: 1px;
+}
+nav.dropdown li > ul li > ul li {
+  width: 15vw;
+}
+nav.dropdown li:hover > a {
+  box-shadow: inset 0px 0px 5vw 0px #793f98;
+}
+nav.dropdown {
+	margin: auto;
+	overflow: visible;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
