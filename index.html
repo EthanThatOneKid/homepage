@@ -3,8 +3,10 @@
 <head>
   <title>Ethan Davidson</title>
   <link rel="shortcut icon" type="image/x-icon" href="http://ethandavidson.com/l/img/ethan-logo.gif">
+  <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
   <link rel="stylesheet"  href="homepage-assets/style.css" />
   <link rel="stylesheet"  href="homepage-assets/dropdown.css" />
+  <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script src="homepage-assets/main.js"></script>
 
@@ -103,7 +105,7 @@
 
   <div id="github-contributions-container" style="background-color:rgba(255,255,255,0.5);text-align:center;padding:10px;">
     My <a href="https://github.com/EthanThatOneKid">GitHub</a> Activity<br><br>
-    <img src="http://ghchart.rshah.org/EthanThatOneKid" style="width:75vw;" alt="EthanThatOneKid's Github chart"/>
+    <div class="calendar">Loading the data just for you.</div>
   </div>
 
   <div id="legacy-bar"></div>
@@ -120,6 +122,8 @@
 </body>
 
 <script>
+
+  GitHubCalendar(".calendar", "EthanThatOneKid", {responsive: true});
 
   /* NAVBAR MENU CONFIG */
   initDropdownMenu(
